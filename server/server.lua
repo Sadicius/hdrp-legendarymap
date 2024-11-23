@@ -5,13 +5,13 @@ lib.locale()
 -----------------------
 -- use campfire
 -----------------------
-RSGCore.Functions.CreateUseableItem('leyendarymap', function(source, item)
+RSGCore.Functions.CreateUseableItem('legendarymap', function(source, item)
     local src = source
     local Player = RSGCore.Functions.GetPlayer(src)
     if not Player then return end
     TriggerClientEvent('hdrp-legendaryanimal:client:legendaryMap', src)
-    Player.Functions.RemoveItem('leyendarymap', 1)
-    TriggerClientEvent('rsg-inventory:client:ItemBox', src, RSGCore.Shared.Items['leyendarymap'], 'remove', 1)
+    Player.Functions.RemoveItem('legendarymap', 1)
+    TriggerClientEvent('rsg-inventory:client:ItemBox', src, RSGCore.Shared.Items['legendarymap'], 'remove', 1)
 end)
 
 local function isPlayerInZone(zone)
