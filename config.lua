@@ -1,0 +1,101 @@
+Config = {}
+Config.spawnedAnimals = {}
+Config.FadeIn = true
+lib.locale()
+
+Config.blip = {
+    bliplocation = true,
+    showgps = true,
+    proximityDistance = 20.0,
+    blipText = 'Clue animal',
+    gpsColor = 'COLOR_RED'
+}
+
+Config.zones = {
+    {zone = 1, coords = vector3(-6144.56, -3667.35, 22.36)},
+    {zone = 2, coords = vector3(-4796.84, -2397.45, 7.83)},
+    {zone = 3, coords = vector3(-4013.84, -3518.40, 47.19)},
+    {zone = 4, coords = vector3(-2882.20, -2387.66, 72.24)},
+    {zone = 5, coords = vector3(-2039.58, -2785.12, 69.11)},
+    {zone = 6, coords = vector3(-2682.72, -1472.06, 147.18)},
+    {zone = 7, coords = vector3(-1083.08, -1710.34, 75.03)},
+    {zone = 8, coords = vector3(-2654.31, -439.72, 159.84)},
+    {zone = 9, coords = vector3(-1830.47, -1120.46, 88.31)},
+    {zone = 10, coords = vector3(52.39, -500.69, 60.62)},
+    {zone = 11, coords = vector3(-2358.97, 333.03, 215.72)},
+    {zone = 12, coords = vector3(-1384.43, 198.46, 90.27)},
+    {zone = 13, coords = vector3(-1897.03, 1701.23, 251.41)},
+    {zone = 14, coords = vector3(-1374.61, 2219.60, 316.39)},
+    {zone = 15, coords = vector3(-967.44, 1626.29, 247.27)},
+    {zone = 16, coords = vector3(-182.13, 2179.05, 327.17)},
+    {zone = 17, coords = vector3(1290.52, 2097.35, 326.53)},
+    {zone = 18, coords = vector3(2394.88, 2019.12, 171.72)},
+    {zone = 19, coords = vector3(280.16, 1295.55, 198.09)},
+    {zone = 20, coords = vector3(1591.66, 1099.64, 186.21)},
+    {zone = 21, coords = vector3(299.49, 67.15, 104.09)},
+    {zone = 22, coords = vector3(2296.96, 512.78, 83.90)},
+    {zone = 23, coords = vector3(2619.66, 214.58, 63.16)},
+    {zone = 24, coords = vector3(892.76, -1241.87, 55.24)},
+    {zone = 25, coords = vector3(1755.00, -533.91, 44.65)},
+    {zone = 26, coords = vector3(2331.92, -805.24, 41.07)},
+    {zone = 27, coords = vector3(1225.64, -2208.79, 52.74)},
+    {zone = 28, coords = vector3(1950.99, -1675.86, 42.26)},
+}
+
+Config.animalList = {
+    [-317373141] =  'cougar',
+    [-1632720801] = 'cougar2',
+    [2046336256] = 'boar',
+    [2085003676] = 'boar2',
+    [-110898462] = 'buck',
+    [56059597] = 'buck2',
+    [1520433456] = 'fox',
+    [751508871] = 'fox2',
+    [-1047689404] = 'alligator',
+    [-768169834] = 'alligator2',
+    [-617397357] = 'beaver',
+    [413253235] = 'beaver2',
+    [-888046168] = 'wolf',
+    [1499142717] = 'wolf2',
+    [159901881] = 'moose',
+    [-4270809] = 'moose2',
+    [417928156] = 'bison',
+    [-1753771781] = 'bison2',
+    [-1598011864] = 'elk',
+    [-1165067836] = 'elk2',
+    [-2103187059] = 'coyote',
+    [1950895318] = 'coyote2',
+    [-1979107230] = 'panther',
+    [2073533311] = 'panther2',
+    [-708560898] = 'ram',
+    [-1077605376] = 'ram2',
+    [-1005924273] = 'bear',
+    [-1245170742] = 'bear2',
+}
+
+-- Animal models configuration with corresponding names
+Config.animalModels = {
+    {hash = 0xAA89BB8D, model = 'mp_a_c_cougar_01', outfit = 4, names = {'cougar', 'cougar2'}},
+    {hash = 0xE8CBC01C, model = 'mp_a_c_boar_01', outfit = 5, names = {'boar', 'boar2'}},
+    {hash = 0x9770DD23, model = 'mp_a_c_buck_01', outfit = 6, names = {'buck', 'buck2'}},
+    {hash = 0xDECA9205, model = 'mp_a_c_fox_01', outfit = 4, names = {'fox', 'fox2'}},
+    {hash = 0x2830CF33, model = 'mp_a_c_alligator_01', outfit = 4, names = {'alligator', 'alligator2'}},
+    {hash = 0xBB746741, model = 'mp_a_c_beaver_01', outfit = 3, names = {'beaver', 'beaver2'}},
+    {hash = 0xAD02460F, model = 'mp_a_c_wolf_01', outfit = 5, names = {'wolf', 'wolf2'}},
+    {hash = 0xF8FC8F63, model = 'mp_a_c_moose_01', outfit = 4, names = {'moose', 'moose2'}},
+    {hash = 0xC971C4C6, model = 'mp_a_c_buffalo_01', outfit = 4, names = {'bison', 'bison2'}},
+    {hash = 0xD1641E60, model = 'mp_a_c_elk_01', outfit = 4, names = {'elk', 'elk2'}},
+    {hash = 0xB20D360D, model = 'mp_a_c_coyote_01', outfit = 4, names = {'coyote', 'coyote2'}},
+    {hash = 0xB91BAB89, model = 'mp_a_c_panther_01', outfit = 4, names = {'panther', 'panther2'}},
+    {hash = 0xE1884260, model = 'mp_a_c_bighornram_01', outfit = 5, names = {'ram', 'ram2'}},
+    {hash = 0xDF251C39, model = 'mp_a_c_bear_01', outfit = 4, names = {'bear', 'bear2'}},
+}
+
+-- {0xBFDC1D2A,'mp_a_c_dogamericanfoxhound_01',2,},
+-- {0x24C5B680,'mp_a_c_owl_01',1,},
+-- {0xDECED2FD,'mp_a_c_possum_01',1,},
+-- {0xFE40DC76,'mp_a_c_pronghorn_01',1,},
+-- {0xF4EA3B49,'mp_a_c_rabbit_01',1,},
+-- {0x9A61FCB8,'mp_a_c_sheep_01',1,},
+-- {0x29465719,'mp_a_c_chicken_01',2,},
+-- {0x2EA769DD,'mp_a_c_deer_01',1,},
