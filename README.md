@@ -16,6 +16,8 @@ Therefore, multiple possibilities are generated when searching for the legendary
 legendarymap     = {name = 'legendarymap',  label = 'Map animal leyendary', weight = 125, type = 'item', image = 'treasuremap.png', unique = false, useable = true,  shouldClose = true, description = 'A map with shared location details'},
 ```
 
+[Preview](https://streamable.com/bhb29s)
+
 REQUIRES RSG FRAMEWORK
 REQUIRES ox_lib
 
